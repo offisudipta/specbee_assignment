@@ -1,44 +1,35 @@
 <?php
 
-/**
- * @file
- * Contains Drupal\specbee_assignment\Form\CustomConfigForm.
- */
-
 namespace Drupal\specbee_assignment\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class CustomConfigForm.
+ * Config Form for Specbee assignment.
  *
  * @package Drupal\specbee_assignment\Form
  */
-class CustomConfigForm extends ConfigFormBase
-{
+class CustomConfigForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames()
-  {
+  protected function getEditableConfigNames() {
     return ['specbee_assignment.settings'];
   }
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId()
-  {
+  public function getFormId() {
     return 'specbee_assignment_form';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state)
-  {
+  public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('specbee_assignment.settings');
     $form['country'] = [
       '#type' => 'textfield',
@@ -69,10 +60,13 @@ class CustomConfigForm extends ConfigFormBase
       '#required' => TRUE,
       '#default_value' => $config->get('timezone'),
     ];
-    return parent::buildForm($form,$form_state);
+    return parent::buildForm($form, $form_state);
   }
-  public function submitForm(array &$form, FormStateInterface $form_state)
-  {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
     $this->config('specbee_assignment.settings')
       ->set('country', $form_state->getValue('country'))
@@ -80,4 +74,5 @@ class CustomConfigForm extends ConfigFormBase
       ->set('timezone', $form_state->getValue('timezone'))
       ->save();
   }
+
 }

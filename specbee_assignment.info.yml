@@ -3,3 +3,4 @@ description: Creates a block to show the current site location and current time 
 package: Custom
 type: module
 core_version_requirement: ^9.4 || ^10
+configure: specbee_assignment.admin_settings_form

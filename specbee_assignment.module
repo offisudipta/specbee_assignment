@@ -1,1 +1,21 @@
 <?php
+
+/**
+ * @file
+ * Module file for Specbee Assignment.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function specbee_assignment_theme($existing, $type, $theme, $path) {
+  return [
+    'specbee_assignment_block' => [
+      'variables' => [
+        'time' => NULL,
+        'date' => NULL,
+        'location' => NULL,
+      ],
+    ],
+  ];
+}

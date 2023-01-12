@@ -10,4 +10,3 @@ specbee_assignment.admin_settings_form:
   parent: specbee_assignment.group.admin
   route_name: specbee_assignment.admin_settings_form
   weight: 100
-

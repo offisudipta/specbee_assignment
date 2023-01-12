@@ -1,4 +1,4 @@
 services:
  specbee_assignment.timezone_time:
    class: Drupal\specbee_assignment\TimezoneTime
-   arguments: ['@config.factory']
+   arguments: ['@config.factory','@date.formatter']

@@ -1,0 +1,5 @@
+specbee_assignment:
+  version: 1.x
+  css:
+    theme:
+      css/specbee_assignment.css: {}
