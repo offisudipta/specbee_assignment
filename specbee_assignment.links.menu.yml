@@ -1,0 +1,13 @@
+specbee_assignment.group.admin:
+  title: 'Specbee Configurations'
+  route_name: system.admin_config_specbee_assignment
+  parent: system.admin_config
+  description: 'Manage Specbee settings for your site'
+  weight: -999
+specbee_assignment.admin_settings_form:
+  title: 'Specbee Assignment Admin'
+  description: 'Manage Specbee Assignment settings for your site'
+  parent: specbee_assignment.group.admin
+  route_name: specbee_assignment.admin_settings_form
+  weight: 100
+

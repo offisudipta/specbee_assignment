@@ -1,0 +1,5 @@
+name: Specbee Assignment
+description: Creates a block to show the current site location and current time in a given format.
+package: Custom
+type: module
+core_version_requirement: ^9.4 || ^10

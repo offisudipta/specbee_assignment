@@ -1,0 +1,18 @@
+specbee_assignment.admin_settings_form:
+  path: '/admin/config/specbee_assignment/config'
+  defaults:
+    _title: 'Specbee Assignment Form'
+    _form: '\Drupal\specbee_assignment\Form\CustomConfigForm'
+  requirements:
+    _permission: 'administer specbee assignment'
+  options:
+    _admin_route: TRUE
+system.admin_config_specbee_assignment:
+  path: '/admin/config/specbee_assignment'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Specbee Assignment'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
