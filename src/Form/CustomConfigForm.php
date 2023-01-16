@@ -47,7 +47,6 @@ class CustomConfigForm extends ConfigFormBase {
       '#type' => 'select',
       '#title' => $this->t('Country'),
       '#options' => [
-        '_none' => $this->t('Options in the select list'),
         'America/Chicago' => $this->t('America/Chicago'),
         'America/New_York' => $this->t('America/New_York'),
         'Asia/Tokyo' => $this->t('Asia/Tokyo'),
@@ -57,6 +56,7 @@ class CustomConfigForm extends ConfigFormBase {
         'Europe/Oslo' => $this->t('Europe/Oslo'),
         'Europe/London' => $this->t('Europe/London'),
       ],
+      '#empty_option' => 'Options in the select list',
       '#required' => TRUE,
       '#default_value' => $config->get('timezone'),
     ];
